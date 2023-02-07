@@ -1,3 +1,13 @@
+# Task Manager
+
+The goals to achieve in this project : -
+- Build UI using ReactJS.
+- Create Task Manager application to Create|Edit|Delete|Update tasks.
+- Create a server using NodeJs and ExpressJs to provide APIS to perform CRUD operations on User and Tasks.
+- Use MongoDB database to store the Users and their tasks.
+- Setup user authentication to enable login/logout.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
