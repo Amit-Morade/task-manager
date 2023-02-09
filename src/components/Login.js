@@ -17,7 +17,7 @@ export default function Login({userAuthentication, userAuthenticationSuccess}) {
     }
 
     return (
-        <div className="border-2 shadow-md shadow-inner rounded-lg">
+        <div className="border-2 shadow-lg rounded-lg">
             <form onSubmit={handleLogin} className="flex flex-col px-4 py-6">
                 <span className="mb-2">UserName</span>
                 <input 
