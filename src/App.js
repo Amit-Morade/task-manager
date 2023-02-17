@@ -78,17 +78,17 @@ function App() {
   }
 
   return (
-    <div className="w-screen h-full relative">
+    <div className="min-h-full relative lg:ml-32 lg:mr-32  lg:bg-red-400">
       {loginSuccess ? 
         (
           <div className="p-2">
             {!taskDialogueVisibility && (
-              <div className="fixed right-0 bottom-0 md:fixed md:right-1/2  md:w-1/2 flex flex-row justify-end pointer m-4">
+              <div className="flex flex-row justify-end pointer m-4">
                 <img src={pen} onClick={() => openTaskDialogue()} className="w-8 cursor-pointer" title="Write a new task"/>
               </div>
             )}
             {taskDialogueVisibility && (
-              <form className="transition duration-150 ease-linear flex flex-col mb-6 md:w-1/2" onSubmit={handleFormSubmit}>
+              <form className="transition duration-150 ease-linear flex flex-col mb-6" onSubmit={handleFormSubmit}>
               <span className="text-sm font-medium text-slate-700">Task Title</span>
               <input ref={taskTitleRef} className="border-2 mb-2 p-2 focus:outline-none" required value={taskTitle} onChange={(event) => setTaskTitle(event.target.value)} type="text" title="Task Name"/>
               <span className="text-sm font-medium text-slate-700">Task Description</span>
@@ -96,12 +96,12 @@ function App() {
               <button className="border-2 w-fit p-2.5 ">Create Task</button>
             </form>
             )}
-            <section className="md:w-1/2 mb-8">
+            <section className="mb-8">
               {database.length===0 && <h3 className="text-lg">No Pending Tasks</h3>}
               {database.length>0 && (
                 <>
                   <p className="mb-4">Tasks To Do</p>
-                  <div className="max-h-screen overflow-auto overflow-x-hidden border-2 ">
+                  <div className="overflow-auto overflow-x-hidden border-2 ">
                     
                     {
                       database.map(task => {
